@@ -1,0 +1,12 @@
+$colores:(
+  "header": rgb(21,21,21),
+  "main": #f39237,
+  "aside": #8d8b8b,
+  "white": #ffffff
+);
+$main-font: 'Poppins', sans-serif;
+@mixin flex($direction,$wrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+};

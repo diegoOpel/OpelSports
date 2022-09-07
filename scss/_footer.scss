@@ -1,0 +1,21 @@
+.footer{
+  background: map-get($colores,"header");
+  color: map-get($colores,"white");
+  padding: 0 10px;
+  @include flex(row,nowrap);
+  &__div{
+    @include flex(row,nowrap);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    &__div{
+      background-color: map-get($colores,"header");
+      &__a{
+        text-decoration: none;
+        color: map-get($colores,"main");
+        padding: 0 10px;
+        font-size: 1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.header{
+  background: map-get($colores,"header");
+  color: map-get($colores,"white");
+  padding: 0 10px;
+  @include flex(row,wrap);
+  &__div{
+    width: 100%;
+    padding-bottom: 10px;
+    @include flex(row,nowrap);
+    justify-content: end;
+    &__div{
+      padding-top: 10px;
+      a{
+        text-decoration: none;
+        color: map-get($colores,"white");
+        padding: 0 10px;
+      }
+      &__div{
+        display: none;
+        width: 40vw;
+        background-color: map-get($colores,"header");
+        @include flex(row,wrap);
+        justify-content: center;
+        position: absolute;
+        padding: 20px;
+        top: -100vh;
+        left: 30vw;
+        border-radius: 5px;
+        h4{
+          text-align: center;
+        }
+        label{
+          text-align: left;
+          margin: 10px 0;
+        }
+        input{
+          margin: 10px 0;
+          width: 100%;
+          padding: 10px auto;
+        }
+        button{
+          background-color: map-get($colores,"white");
+          padding: 5px 15px;
+          margin: 5px auto;
+          border-radius: 5px;
+          border-color: map-get($colores,"white");
+        }
+      }
+    }  
+  }
+  &__nav {
+    @include flex(row,nowrap);
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid map-get($colores,"white")  ;
+    padding-top: 10px;
+    &__h1{
+      font-size: 2em;
+      color: map-get($colores,"white");
+    }
+    &__div{
+      @include flex(row,nowrap);
+      &__ul{
+        @include flex(row,nowrap);
+        align-items: center;
+        &__li{
+          list-style: none;
+          padding: 0 20px;
+          a{
+            text-decoration: none;
+            color: map-get($colores,"white");
+          }
+          &__ul{
+            display:none;
+            }
+        }
+        
+      }
+      &__div{
+        @include flex(row,nowrap);
+        align-items: center;
+        padding: 10px 0;
+        button{
+          background-color: map-get($colores,"white");
+          padding: 5px 15px;
+          margin: 0 5px;
+          border-radius: 5px;
+          border-color: map-get($colores,"white");
+          cursor: pointer;
+          i{font-size: 1.2em;}
+        }
+        &__div{
+          position: absolute;
+          right: 0;
+          top: -100vh;
+          //18.3vh
+          width: 25%;
+          background-color: map-get($colores,"header");
+        }
+        form{
+          input{
+            border-radius: 5px;
+            padding: 7px;
+          }
+          button{
+            margin-left: 0;
+            padding: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  } 
+}
