@@ -66,15 +66,31 @@
         &__li{
           list-style: none;
           padding: 0 20px;
+          
           a{
             text-decoration: none;
             color: map-get($colores,"white");
-          }
-          &__ul{
-            display:none;
             }
+          ul{
+              display: none;
+            }
+          &:hover{
+            ul{
+              @include flex(column,nowrap);
+              list-style: none;
+              position: absolute;
+              margin-right: 10px;
+              background-color: rgba(0, 0, 0, 0.137);
+              padding: 10px;
+              border-radius: 5px;
+              text-align: center;
+              li{
+                border-bottom: 2px solid black;
+                padding: 2px 0;
+              }
+            }
+          }
         }
-        
       }
       &__div{
         @include flex(row,nowrap);
@@ -90,12 +106,41 @@
           i{font-size: 1.2em;}
         }
         &__div{
+          visibility: hidden;
           position: absolute;
           right: 0;
-          top: -100vh;
-          //18.3vh
           width: 25%;
           background-color: map-get($colores,"header");
+          @include flex(row,wrap);
+          justify-content: space-between;
+          border-bottom-left-radius: 10px;
+          div{
+            width: 100%;
+            @include flex(row,nowrap);
+            padding: 10px 5px;
+            margin: 1px 0;
+            background-color: map-get($colores, "aside" );
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            position: relative;
+            button{
+              position: absolute;
+              right: 0;
+            }
+            div{
+              position: relative;
+              @include flex(row,wrap);
+              button{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+              }
+              img{
+                width: 100%;
+                border-radius: 5px;
+              }
+            }
+          }
         }
         form{
           input{
@@ -111,4 +156,9 @@
       }
     }
   } 
+}
+.modal-active{
+  visibility: visible;
+  position:absolute;
+  top: 18.3vh;
 }

@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  text-decoration: none; }
 
 footer {
   min-height: 10vh; }
@@ -80,8 +81,22 @@ footer {
           .header__nav__div__ul__li a {
             text-decoration: none;
             color: #ffffff; }
-          .header__nav__div__ul__li__ul {
+          .header__nav__div__ul__li ul {
             display: none; }
+          .header__nav__div__ul__li:hover ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            list-style: none;
+            position: absolute;
+            margin-right: 10px;
+            background-color: rgba(0, 0, 0, 0.137);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center; }
+            .header__nav__div__ul__li:hover ul li {
+              border-bottom: 2px solid black;
+              padding: 2px 0; }
       .header__nav__div__div {
         display: flex;
         flex-direction: row;
@@ -98,11 +113,42 @@ footer {
           .header__nav__div__div button i {
             font-size: 1.2em; }
         .header__nav__div__div__div {
+          visibility: hidden;
           position: absolute;
           right: 0;
-          top: -100vh;
           width: 25%;
-          background-color: #151515; }
+          background-color: #151515;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          border-bottom-left-radius: 10px; }
+          .header__nav__div__div__div div {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 10px 5px;
+            margin: 1px 0;
+            background-color: #8d8b8b;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            position: relative; }
+            .header__nav__div__div__div div button {
+              position: absolute;
+              right: 0; }
+            .header__nav__div__div__div div div {
+              position: relative;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap; }
+              .header__nav__div__div__div div div button {
+                position: absolute;
+                right: 0;
+                bottom: 0; }
+              .header__nav__div__div__div div div img {
+                width: 100%;
+                border-radius: 5px; }
         .header__nav__div__div form input {
           border-radius: 5px;
           padding: 7px; }
@@ -111,9 +157,14 @@ footer {
           padding: 5px;
           cursor: pointer; }
 
+.modal-active {
+  visibility: visible;
+  position: absolute;
+  top: 18.3vh; }
+
 .main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   background-color: #f39237; }
   .main__aside {
@@ -157,7 +208,45 @@ footer {
         border-bottom: 2px solid #151515;
         cursor: pointer; }
         .main__aside__div__div__ul__li__button__ul {
-          display: none; }
+          display: none;
+          list-style: none;
+          text-decoration: none; }
+          .main__aside__div__div__ul__li__button__ul a {
+            color: #151515; }
+  .main__section {
+    display: flex;
+    flex-direction: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 80%; }
+    .main__section article {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 30%;
+      border-radius: 10px;
+      background: #8d8b8b;
+      height: fit-content;
+      text-align: center;
+      margin: 10px;
+      box-shadow: 2px 2px 5px black;
+      justify-content: center;
+      align-items: center; }
+      .main__section article .imagenProducto {
+        width: 100%;
+        border-radius: 10px; }
+      .main__section article .precioProducto {
+        width: 100%; }
+      .main__section article .botonCargaCarrito {
+        width: 100%;
+        padding: 5px 0;
+        cursor: pointer; }
+      .main__section article .botonTalle {
+        padding: 2px 5px;
+        margin: 0 1px; }
+
+.aside-active {
+  display: block; }
 
 .footer {
   background: #151515;

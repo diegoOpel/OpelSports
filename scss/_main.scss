@@ -1,5 +1,5 @@
 .main{
-  @include flex(column,nowrap);
+  @include flex(row,nowrap);
   background-color: map-get($colores,"main");
   &__aside{
     @include flex(column,nowrap);
@@ -48,6 +48,9 @@
               cursor: pointer;
               &__ul{
                 display: none;
+                list-style: none;
+                text-decoration: none;
+                a{color: map-get($colores, "header" )}
               }
             }
           }
@@ -55,4 +58,40 @@
       }
     }
   }
+  &__section{
+    @include flex(flex,wrap);
+    padding: 10px;
+    width: 80%;
+    article{
+      @include flex(row,wrap);
+      width: 30%;
+      border-radius: 10px;
+      background: map-get($colores,"aside");
+      height: fit-content;
+      text-align: center;
+      margin: 10px;
+      box-shadow: 2px 2px 5px black;
+      justify-content: center;
+      align-items: center;
+      .imagenProducto{
+        width: 100%;
+        border-radius: 10px;
+      }
+      .precioProducto{
+        width: 100%;
+      }
+      .botonCargaCarrito{
+        width: 100%;
+        padding: 5px 0;
+        cursor: pointer;
+      }
+      .botonTalle{
+        padding: 2px 5px;
+        margin: 0 1px;
+      }
+    }
+  }
+}
+.aside-active{
+  display: block;
 }
