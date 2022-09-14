@@ -8,6 +8,7 @@ const asideMarcaUL = document.getElementById("aside__marca__ul");
 const asideTalleUL = document.getElementById("aside__talle__ul");
 const asidePrecioForm = document.getElementById("aside__precio__form");
 
+
 productos.forEach((producto) => {
   const article = document.createElement("article");
   const div = document.createElement("div");
@@ -41,10 +42,11 @@ asideMarca.addEventListener("click",()=>{
   asideMarcaUL.classList.toggle("aside-active");
 });
 
-asideTalle.addEventListener("click",()=>{
+/* asideTalle.addEventListener("click",()=>{
   asideTalleUL.classList.toggle("aside-active");
 });
 
 asidePrecio.addEventListener("click",()=>{
   asidePrecioForm.classList.toggle("aside-active");
-});
+}); */
+

@@ -74,3 +74,35 @@ navNinio.addEventListener("click",filtraPorNinio);
 let navOferta = document.getElementById("nav__oferta");
 navOferta.addEventListener("click",filtraPorOferta);
 
+const inputBuscar = document.getElementById("inputBuscar");
+const botonBuscar = document.getElementById("botonBuscar");
+
+const buscador = () =>{
+  let busqueda = inputBuscar.value;
+  const resultado = productos.filter((producto) => producto.nombre.toLowerCase().includes(busqueda.toLowerCase()));
+  mainSection.innerHTML = "";
+  resultado.forEach((resultado) => {
+    const article = document.createElement("article");
+    const div = document.createElement("div");
+    let tamanios = resultado.talle.forEach((tamanio) =>{
+      const botonTalle = document.createElement("button");
+      botonTalle.className ="botonTalle";
+      botonTalle.innerText = tamanio;
+      div.appendChild(botonTalle);});
+    div.className = "divTalle";
+    article.innerHTML = `
+    <img src="${resultado.imagen}" alt="${resultado.nombre}" class="imagenProducto">
+    <h3 class="tituloProducto">${resultado.nombre.toLocaleUpperCase()}</h3>
+    <b class="precioProducto">$ ${resultado.precio}</b><p class="precioAnterior">$ ${resultado.precioAnterior}</p>
+    <p>Talles</p> ${div.innerHTML}
+    <button type="button" class="botonCargaCarrito" id="boton${resultado.id}">Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></button>
+    `;
+    mainSection.appendChild(article);
+    const boton = document.getElementById(`boton${resultado.id}`);
+    boton.addEventListener("click", ()=>{
+    cargarAlCarrito(resultado.id);
+    alert(`Se agrego el producto ${resultado.nombre} al carrito`);});
+})}
+ 
+botonBuscar.addEventListener("click",buscador);
+
