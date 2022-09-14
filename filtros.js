@@ -93,7 +93,7 @@ const buscador = () =>{
     article.innerHTML = `
     <img src="${resultado.imagen}" alt="${resultado.nombre}" class="imagenProducto">
     <h3 class="tituloProducto">${resultado.nombre.toLocaleUpperCase()}</h3>
-    <b class="precioProducto">$ ${resultado.precio}</b><p class="precioAnterior">$ ${resultado.precioAnterior}</p>
+    <b class="precioProducto">$ ${resultado.precio}</b>
     <p>Talles</p> ${div.innerHTML}
     <button type="button" class="botonCargaCarrito" id="boton${resultado.id}">Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></button>
     `;
