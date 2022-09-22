@@ -162,6 +162,13 @@ footer {
   position: absolute;
   top: 18.3vh; }
 
+.boton-eliminar {
+  z-index: 1000; }
+
+#vaciarCarrito {
+  position: static;
+  margin: auto; }
+
 .main {
   display: flex;
   flex-direction: row;

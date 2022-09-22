@@ -102,12 +102,13 @@
             <button type="button" id="botonBuscar" for="inputBuscar">Buscar</button>
           </form>
           <button type="button" id="abrir"><i class="fa-solid fa-cart-shopping"></i></button>
-          <div class="header__nav__div__div__div" id="contenedor-carrito">
+          <div class="header__nav__div__div__div" id="contenedor-carrito" >
             <div>
               <h4>Carrito</h4>
-              <button type="button" id="cerrar"><i class="fa-solid fa-xmark"></i></button>  
+              <button type="button" id="cerrar"><i class="fa-solid fa-xmark"></i></button>
+              <div id="contenedor-productos"></div>
             </div>
-            
+            <div id="divVaciarCarrito"><div id="total"></div><button type="button" class="productoEnCarrito" id="vaciarCarrito">Vaciar carrito<i class="fa-solid fa-trash-can"></i></button></div>  
           </div>
         </div>
       </nav>
@@ -140,12 +141,12 @@
                   <li><a class="" href="#">Under Armour</a></li>
                 </ul>
               </li>
-              <!-- <li class="main__aside__div__div__ul__li" id="aside__talle">
+              <li class="main__aside__div__div__ul__li" id="aside__talle">
                 <button class="main__aside__div__div__ul__li__button"><h4>Talle</h4> <i class="fa-solid fa-angle-down"></i></button>
                 <ul class="main__aside__div__div__ul__li__button__ul" id="aside__talle__ul">
                 </ul>
-              </li> -->
-              <!-- <li class="main__aside__div__div__ul__li" id="aside__precio">
+              </li> 
+              <li class="main__aside__div__div__ul__li" id="aside__precio">
                 <button class="main__aside__div__div__ul__li__button"><h4>Precio</h4>  <i class="fa-solid fa-angle-down"></i></button>
                 <form action="" method="post" id="aside__precio__form">
                   <fieldset>
@@ -158,7 +159,7 @@
                   </fieldset>
                   <button type="submit">Filtrar rango</button>
                 </form>
-              </li> -->
+              </li>
             </ul>
           </div>
         </div>
