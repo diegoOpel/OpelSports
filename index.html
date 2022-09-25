@@ -13,169 +13,89 @@
     <link rel="icon" href="./media/futbol-solid.svg">
 </head>
 <body>
-    <header class="header">
-      <div class="header__div">
-        <div class="header__div__div">
-          <a href="">Iniciar sesión</a>
-          <div class="header__div__div__div">
-            <form action="" method="post">
-              <h4>Iniciá sesión</h4>
-              <label for="emailLogIn">E-mail</label>
-              <input type="email" name="email" id="emailLogIn" placeholder="Ingresá tu mail">
-              <label for="passLogIn">Contraseña</label>
-              <input type="password" name="password" id="passLogIn" placeholder="Ingresá tu contraseña">
-              <button type="submit">Ingresar</button>
-              <button type="reset">Borrar</button>
-              <button type="button">Olvidé mi contraseña</button>
-            </form>
-          </div>
-          <a href="">Registrarse</a> 
-          <div class="header__div__div__div">
-            <form action="" method="post">
-              <h4>Registrate</h4>
-              <label for="emailLogUp">E-mail</label>
-              <input type="email" name="email" id="emailLogUp" placeholder="Ingresá tu mail">
-              <label for="passLogUp">Contraseña</label>
-              <input type="password" name="password" id="passLogUp" placeholder="Ingresá tu contraseña">
-              <label for="passLogUpCheck">Repetí la contraseña</label>
-              <input type="password" name="password" id="passLogUpCheck" placeholder="Repetí tu contraseña">
-              <button type="submit">Crear cuenta</button>
-              <button type="reset">Borrar</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <nav class="header__nav">
-        <a href="./index.html"><h1 class="header__nav__h1"><i class="fa-regular fa-futbol"></i>OpelSports</h1></a>
-        <div class="header__nav__div">
-          <ul class="header__nav__div__ul">
-            <li class="header__nav__div__ul__li">
-              <a class="" id="nav__hombre" href="#">Hombre</a>
-              <ul class="header__nav__div__ul__li__ul" id="nav__hombre__ul">
-                <li><a id="hombreZapatilla" href="#">Zapatillas</a></li>
-                <li><a id="hombreBotines" href="#">Botines</a></li>
-                <li><a id="hombreIndumentaria" href="#">Indumentaria</a></li>
-                <li><a id="hombreAccesorios" href="#">Accesorios</a></li>
-              </ul>
-            </li>
-            <li class="header__nav__div__ul__li">
-              <a class="" id="nav__mujer" href="#">
-                Mujer
-              </a>
-              <ul class="header__nav__div__ul__li__ul">
-                <li><a class="" href="#">Zapatillas</a></li>
-                <li><a class="" href="#">Indumentaria</a></li>
-                <li><a class="" href="#">Accesorios</a></li>
-              </ul>
-            </li>
-            <li class="header__nav__div__ul__li">
-              <a class="" id="nav__ninio" href="#">
-                Niño
-              </a>
-              <ul class="header__nav__div__ul__li__ul">
-                <li><a class="" href="#">Zapatillas</a></li>
-                <li><a class="" href="#">Botines</a></li>
-                <li><a class="" href="#">Indumentaria</a></li>
-                <li><a class="" href="#">Accesorios</a></li>
-              </ul>
-            </li>
-            <li class="header__nav__div__ul__li">
-              <a class="" href="#">
-                Deporte
-              </a>
-              <ul class="header__nav__div__ul__li__ul">
-                <li><a class="" href="#">Fútbol</a></li>
-                <li><a class="" href="#">Tenis</a></li>
-                <li><a class="" href="#">Basket</a></li>
-                <li><a class="" href="#">Rugby</a></li>
-                <li><a class="" href="#">Natación</a></li>
-              </ul>
-            </li>
-            <li class="header__nav__div__ul__li">
-              <a class="" id="nav__oferta" href="#">Ofertas</a>
-            </li>
-          </ul>
-        </div>
-        <div class="header__nav__div__div">
-          <form>
-            <input type="search" placeholder="¿Qué estás buscando?" label="Search" id="inputBuscar">
-            <button type="button" id="botonBuscar" for="inputBuscar">Buscar</button>
-          </form>
-          <button type="button" id="abrir"><i class="fa-solid fa-cart-shopping"></i></button>
-          <div class="header__nav__div__div__div" id="contenedor-carrito" >
-            <div>
-              <h4>Carrito</h4>
-              <button type="button" id="cerrar"><i class="fa-solid fa-xmark"></i></button>
-              <div id="contenedor-productos"></div>
-            </div>
-            <div id="divVaciarCarrito"><div id="total"></div><button type="button" class="productoEnCarrito" id="vaciarCarrito">Vaciar carrito<i class="fa-solid fa-trash-can"></i></button></div>  
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main class="main">
-      <aside class="main__aside">
-        <button class="main__aside__button" type="button">Filtrar por</button>
-        <div class="main__aside__div" id="" >
-          <h3 class="">Refiná tu búsqueda</h3>
-          <div class="main__aside__div__div">
-            <ul main__aside__div__div__ul>
-              <li class="main__aside__div__div__ul__li" id="aside__genero">
-                <button class="main__aside__div__div__ul__li__button"><h4>Género</h4><i class="fa-solid fa-angle-down"></i></button>
-                <ul class="main__aside__div__div__ul__li__button__ul" id="aside__genero__ul">
-                  <li><a class="" href="#">Mujer</a></li>
-                  <li><a class="" href="#">Hombre</a></li>
-                  <li><a class="" href="#">Niño</a></li>
-                  <li><a class="" href="#">Unisex</a></li>
-                </ul>               
-              </li>
-              <li class="main__aside__div__div__ul__li" id="aside__marca">
-                <button class="main__aside__div__div__ul__li__button" ><h4>Marca</h4>  <i class="fa-solid fa-angle-down"></i></button>
-                <ul class="main__aside__div__div__ul__li__button__ul" id="aside__marca__ul">
-                  <li><a class="" href="#">Nike</a></li>
-                  <li><a class="" href="#">Adidas</a></li>
-                  <li><a class="" href="#">Reebok</a></li>
-                  <li><a class="" href="#">Topper</a></li>
-                  <li><a class="" href="#">Asics</a></li>
-                  <li><a class="" href="#">Puma</a></li>
-                  <li><a class="" href="#">Under Armour</a></li>
-                </ul>
-              </li>
-              <li class="main__aside__div__div__ul__li" id="aside__talle">
-                <button class="main__aside__div__div__ul__li__button"><h4>Talle</h4> <i class="fa-solid fa-angle-down"></i></button>
-                <ul class="main__aside__div__div__ul__li__button__ul" id="aside__talle__ul">
-                </ul>
-              </li> 
-              <li class="main__aside__div__div__ul__li" id="aside__precio">
-                <button class="main__aside__div__div__ul__li__button"><h4>Precio</h4>  <i class="fa-solid fa-angle-down"></i></button>
-                <form action="" method="post" id="aside__precio__form">
-                  <fieldset>
-                    <label for="precioMin">desde:</label>
-                    <input type="number" name="precioMin" id="precioMin">
-                  </fieldset>
-                  <fieldset>
-                    <label for="precioMax">hasta:</label>
-                    <input type="number" name="precioMax" id="precioMax">
-                  </fieldset>
-                  <button type="submit">Filtrar rango</button>
-                </form>
-              </li>
+  <header class="header">
+    <nav class="header__nav">
+      <a href="./index.html"><h1 class="header__nav__h1"><i class="fa-regular fa-futbol"></i>OpelSports</h1></a>
+      <div class="header__nav__div">
+        <ul class="header__nav__div__ul">
+          <li class="header__nav__div__ul__li">
+            <a class="" id="nav__hombre" href="#">Hombre</a>
+            <ul class="header__nav__div__ul__li__ul" id="nav__hombre__ul">
+              <li><a id="hombreZapatilla" href="#" value="zapatilla">Zapatillas</a></li>
+              <li><a id="hombreBotines" href="#">Botines</a></li>
+              <li><a id="hombreIndumentaria" href="#">Indumentaria</a></li>
+              <li><a id="hombreAccesorios" href="#">Accesorios</a></li>
             </ul>
+          </li>
+          <li class="header__nav__div__ul__li">
+            <a class="" id="nav__mujer" href="#">
+              Mujer
+            </a>
+            <ul class="header__nav__div__ul__li__ul" id="nav__mujer__ul">
+              <li><a id="mujerZapatilla" href="#">Zapatillas</a></li>
+              <li><a id="mujerIndumentaria" href="#">Indumentaria</a></li>
+              <li><a id="mujerAccesorios" href="#">Accesorios</a></li>
+            </ul>
+          </li>
+          <li class="header__nav__div__ul__li">
+            <a class="" id="nav__ninio" href="#">
+              Niño
+            </a>
+            <ul class="header__nav__div__ul__li__ul" id="nav__ninio__ul">
+              <li><a id="ninioZapatilla" href="#">Zapatillas</a></li>
+              <li><a id="ninioBotines" href="#">Botines</a></li>
+              <li><a id="ninioIndumentaria" href="#">Indumentaria</a></li>
+              <li><a id="ninioAccesorios" href="#">Accesorios</a></li>
+            </ul>
+          </li>
+          <li class="header__nav__div__ul__li">
+            <a class="" href="#">
+              Deporte
+            </a>
+            <ul class="header__nav__div__ul__li__ul" id="nav__deporte__ul">
+              <li><a id="futbol" href="#">Fútbol</a></li>
+              <li><a id="tenis" href="#">Tenis</a></li>
+              <li><a id="basket" href="#">Basket</a></li>
+              <li><a id="rugby" href="#">Rugby</a></li>
+              <li><a id="natacion" href="#">Natación</a></li>
+            </ul>
+          </li>
+          <li class="header__nav__div__ul__li">
+            <a class="" id="nav__oferta" href="#">Ofertas</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__nav__div__div">
+        <form>
+          <input type="search" placeholder="¿Qué estás buscando?" label="Search" id="inputBuscar">
+          <button type="button" id="botonBuscar" for="inputBuscar">Buscar</button>
+        </form>
+        <button type="button" id="abrir"><i class="fa-solid fa-cart-shopping"></i></button>
+        <div class="header__nav__div__div__div" id="contenedor-carrito" >
+          <div>
+            <h4>Carrito</h4>
+            <button type="button" id="cerrar"><i class="fa-solid fa-xmark"></i></button>
           </div>
-        </div>
-      </aside>
-      <section class="main__section" id="main__section">
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__div">
-        <div class="footer__div__div"><a href="https://github.com/diegoOpel" class="footer__div__div__a">©Diego Opel</a></div>
-        <div class="footer__div__div">
-          <a href="#" class="footer__div__div__a"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"class="footer__div__div__a"><i class="fa-brands fa-instagram"></i></a>
+          <div id="contenedor-productos"></div>
+          <div id="divVaciarCarrito"><div id="total"></div><button type="button" class="productoEnCarrito" id="vaciarCarrito">Vaciar carrito <i class="fa-solid fa-trash-can"></i></button></div>  
         </div>
       </div>
-    </footer>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="main__section" id="main__section">
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__div">
+      <div class="footer__div__div"><a href="https://github.com/diegoOpel" class="footer__div__div__a">©Diego Opel</a></div>
+      <div class="footer__div__div">
+        <a href="#" class="footer__div__div__a"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"class="footer__div__div__a"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./productos.js"></script>
   <script src="./index.js"></script>
   <script src="./filtros.js"></script>

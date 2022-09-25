@@ -1,70 +1,14 @@
 .main{
   @include flex(row,nowrap);
   background-color: map-get($colores,"main");
-  &__aside{
-    @include flex(column,nowrap);
-    background: map-get($colores,"aside");
-    width: 20%;
-    min-height: 100vh;
-    padding: 20px;
-    &__button{
-      display: none;
-    }
-    h3{
-      width: 100%;
-      text-align: center;
-      font-size: 1.2em;
-    }
-    &__div{
-      &__div{
-        &__ul{
-          &__li{
-            width: 100%;
-            list-style: none;
-            font-size: 1.2em;
-            h4{
-              font-size: 1em;
-            }
-            form{
-              display: none;
-              width: 100%;
-              fieldset{
-                border: none;
-              }
-              button{
-                width: 100%;
-              }
-            }
-            &__button{
-              width: 100%;
-              margin: 30px 0;
-              padding: 0 5px;
-              @include flex(flex,nowrap);
-              justify-content: space-between;
-              background: map-get($colores,"aside");
-              font-size: 1em;
-              border: none;
-              border-bottom: 2px solid map-get($colores,"header");
-              cursor: pointer;
-              &__ul{
-                display: none;
-                list-style: none;
-                text-decoration: none;
-                a{color: map-get($colores, "header" )}
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  min-height: 100vh;
   &__section{
     @include flex(flex,wrap);
+    justify-content: space-evenly;
     padding: 10px;
-    width: 80%;
     article{
       @include flex(row,wrap);
-      width: 30%;
+      width: 25%;
       border-radius: 10px;
       background: map-get($colores,"aside");
       height: fit-content;
@@ -94,4 +38,18 @@
 }
 .aside-active{
   display: block;
+}
+#oferta{
+  @include flex(row,nowrap);
+  p{
+    text-decoration: line-through;
+    color: red;
+  }
+}
+.divTalle{
+  @include flex(row,nowrap);
+  p{
+    color: black;
+    text-decoration: none;
+  }
 }

@@ -1,13 +1,4 @@
 const mainSection = document.getElementById("main__section");
-const asideGenero = document.getElementById("aside__genero");
-const asideMarca = document.getElementById("aside__marca");
-const asideTalle = document.getElementById("aside__talle");
-const asidePrecio = document.getElementById("aside__precio");
-const asideGeneroUL = document.getElementById("aside__genero__ul");
-const asideMarcaUL = document.getElementById("aside__marca__ul");
-const asideTalleUL = document.getElementById("aside__talle__ul");
-const asidePrecioForm = document.getElementById("aside__precio__form");
-
 
 productos.forEach((producto) => {
   const article = document.createElement("article");
@@ -29,24 +20,16 @@ productos.forEach((producto) => {
   const boton = document.getElementById(`boton${producto.id}`);
   boton.addEventListener("click", ()=>{
     cargarAlCarrito(producto.id);
-    alert(`Se agrego el producto ${producto.nombre} al carrito`);
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: `Se agrego el producto ${producto.nombre.toUpperCase()} al carrito.`,
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
   )
 });
 
-asideGenero.addEventListener("click",()=>{
-  asideGeneroUL.classList.toggle("aside-active");
-});
 
-asideMarca.addEventListener("click",()=>{
-  asideMarcaUL.classList.toggle("aside-active");
-});
-
-/* asideTalle.addEventListener("click",()=>{
-  asideTalleUL.classList.toggle("aside-active");
-});
-
-asidePrecio.addEventListener("click",()=>{
-  asidePrecioForm.classList.toggle("aside-active");
-}); */
 

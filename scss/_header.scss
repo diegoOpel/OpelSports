@@ -116,10 +116,11 @@
           border-bottom-left-radius: 10px;
           div{
             width: 100%;
-            @include flex(row,nowrap);
+            @include flex(row,wrap);
             padding: 10px 5px;
             margin: 1px 0;
             background-color: map-get($colores, "aside" );
+            
             border-bottom-left-radius: 10px;
             border-top-left-radius: 10px;
             position: relative;
@@ -129,16 +130,23 @@
             }
             div{
               position: relative;
-              @include flex(row,wrap);
-              button{
-                position: absolute;
-                right: 0;
-                bottom: 0;
+              @include flex(row,nowrap);
+              div{
+                @include flex(row,wrap);
+                justify-content: space-evenly;
+                padding-bottom: 20px;
+                img{
+                  width: 100%;
+                  border-radius: 5px;
+                }
+                button{
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+                }
               }
-              img{
-                width: 100%;
-                border-radius: 5px;
-              }
+              
+              
             }
           }
         }
@@ -159,16 +167,11 @@
 }
 .modal-active{
   visibility: visible;
-  position:absolute;
-  top: 18.3vh;
+  position: absolute;
+  top: 10.5vh;
 }
-.boton-eliminar{
-  z-index: 1000;
-  i{
-    
-  }
-}
+
 #vaciarCarrito{
-  position: static;
-  margin: auto;
+  margin-top: 5px;
 }
+
